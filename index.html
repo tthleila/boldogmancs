@@ -1,0 +1,533 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Boldog Mancs Állatmenhely</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+    <link rel="apple-touch-icon" sizes="180x180" href="img/fav.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="img/fav.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="img/fav.png">
+</head>
+<body>
+    <!-- Fejléc -->
+    <header id="mainHeader">
+        <div class="container">
+            <div class="logo">
+                <div class="logo-icon">
+                    <i class="fas fa-paw"></i>
+                </div>
+                <div class="logo-text">
+                    <h1>Boldog Mancs Állatmenhely</h1>
+                    <p>Minden állat egy otthonra vágyik!</p>
+                </div>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="#" class="nav-link active" data-page="home">Főoldal</a></li>
+                    <li><a href="#" class="nav-link" data-page="adoption">Örökbefogadás</a></li>
+                    <li><a href="#" class="nav-link" data-page="about">Bemutatkozás</a></li>
+                    <li><a href="#" class="nav-link" data-page="story">Történet</a></li>
+                    <li><a href="#" class="nav-link" data-page="contact">Elérhetőség</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Főoldal -->
+    <main id="home" class="page active">
+        <!-- Hero szekció - Örökbefogadás fókuszban -->
+        <section class="hero">
+            <div class="slideshow">
+                <div class="slide active" style="background-image: url('img/blog3.jpg')">
+                    <div class="slide-content">
+                        <h2>Adj otthont egy szeretetgombócnak!</h2>
+                        <p>Menhelyünk több mint 50 kutyus és cicus várja, hogy végre megtalálja az örökbefogadóját.</p>
+                        <a href="#" class="btn nav-link" data-page="adoption">Örökbefogadás</a>
+                    </div>
+                </div>
+                <div class="slide" style="background-image: url('img/blog2.jpg')">
+                    <div class="slide-content">
+                        <h2>Új családtagod vár!</h2>
+                        <p>Fedezd fel menhelyünk szeretetre vágyó lakóit és találd meg az új családtagodat!</p>
+                        <a href="#" class="btn nav-link" data-page="adoption">Ismerd meg őket</a>
+                    </div>
+                </div>
+                <div class="slide" style="background-image: url('img/blog5.jpg')">
+                    <div class="slide-content">
+                        <h2>Miért örökbefogadni?</h2>
+                        <p>Az örökbefogadás életeket ment és boldoggá tesz mindenkit!</p>
+                        <a href="#" class="btn nav-link" data-page="story">Tudj meg többet</a>
+                    </div>
+                </div>
+                <div class="slide" style="background-image: url('img/blog4.jpg')">
+                    <div class="slide-content">
+                        <h2>Önkéntes programunk</h2>
+                        <p>Csatlakozz hozzánk és segíts az állatok boldoggá tételében!</p>
+                        <a href="#" class="btn nav-link" data-page="contact">Kapcsolat</a>
+                    </div>
+                </div>
+
+                <!-- Slideshow navigációs nyilak -->
+                <div class="slideshow-arrow prev">
+    <i class="fas fa-chevron-left"></i>
+</div>
+<div class="slideshow-arrow next">
+    <i class="fas fa-chevron-right"></i>
+</div>
+            </div>
+            <div class="slideshow-nav">
+                <div class="slideshow-dot active" data-slide="0"></div>
+                <div class="slideshow-dot" data-slide="1"></div>
+                <div class="slideshow-dot" data-slide="2"></div>
+                <div class="slideshow-dot" data-slide="3"></div>
+            </div>
+        </section>
+
+        <!-- Kiemelt állatok -->
+        <section class="featured-animals">
+            <div class="container">
+                <div class="section-title fade-in">
+                    <h2>Kiemelt állatkák</h2>
+                    <p>Ismerd meg azokat a szeretetgombócokat, akik különösen sürgősen várják az örökbefogadójukat!</p>
+                </div>
+                <div class="animal-grid" id="featuredAnimals">
+                    <!-- Kiemelt állatok JavaScriptből jönnek -->
+                </div>
+                <div class="text-center" style="margin-top: 40px;">
+                    <a href="#" class="btn nav-link" data-page="adoption">Összes állat megtekintése</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Hírek -->
+        <section class="news">
+            <div class="container">
+                <div class="section-title">
+                    <h2>Legfrissebb híreink</h2>
+                    <p>Maradj naprakész menhelyünk legújabb eseményeiről és híreiről!</p>
+                </div>
+                <div class="news-grid" id="newsGrid">
+                    <!-- Blog bejegyzések JavaScriptből jönnek -->
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Örökbefogadás oldal -->
+    <section id="adoption" class="page adoption-page">
+        <div class="container">
+            <div class="section-title">
+                <h2>Örökbefogadható állatkák</h2>
+                <p>Fedezd fel menhelyünk szeretetre vágyó lakóit és találd meg az új családtagodat!</p>
+            </div>
+            <div class="filter-options">
+                <button class="filter-btn active" data-filter="all">Összes</button>
+                <button class="filter-btn" data-filter="kutya">Kutyák</button>
+                <button class="filter-btn" data-filter="macska">Macskák</button>
+                <button class="filter-btn" data-filter="kicsi">Kis méret</button>
+                <button class="filter-btn" data-filter="kozepes">Közepes méret</button>
+                <button class="filter-btn" data-filter="nagy">Nagy méret</button>
+                <button class="filter-btn" data-filter="urgent">Sürgős eset</button>
+            </div>
+            <div class="animal-grid" id="adoptionAnimals">
+                <!-- Örökbefogadható állatok JavaScriptből jönnek -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Bemutatkozás oldal -->
+    <section id="about" class="page about-page">
+        <div class="container">
+            <div class="section-title">
+                <h2>Bemutatkozás</h2>
+                <p>A Boldog Mancs Állatmenhely 2010 óta tevékenykedik az elhagyott és sérült állatok megmentésében</p>
+            </div>
+            <div class="about-content">
+                <div class="about-text">
+                    <p>A Boldog Mancs Állatmenhely 2010 óta tevékenykedik az elhagyott és sérült állatok megmentésében, gyógyításában és új otthonba juttatásában. Célunk, hogy minden állatnak szerető és felelős gazdát találjunk.</p>
+                    <p>Évente több mint 200 állat talál új otthont menhelyünkön keresztül. Munkánkat önkéntesek és adományok segítségével végezzük.</p>
+                    
+                    <div class="shelter-status">
+                        <h3>Menhelyünk aktuális állapota</h3>
+                        <div class="status-cards">
+                            <div class="status-card">
+                                <div class="status-icon">
+                                    <i class="fas fa-home"></i>
+                                </div>
+                                <div class="status-info">
+                                    <div class="status-number" id="currentAnimals">42</div>
+                                    <div class="status-label">Jelenlegi állat</div>
+                                </div>
+                            </div>
+                            <div class="status-card">
+                                <div class="status-icon">
+                                    <i class="fas fa-heart"></i>
+                                </div>
+                                <div class="status-info">
+                                    <div class="status-number" id="adoptedThisMonth">18</div>
+                                    <div class="status-label">Örökbefogadva ebben a hónapban</div>
+                                </div>
+                            </div>
+                            <div class="status-card">
+                                <div class="status-icon">
+                                    <i class="fas fa-hand-holding-heart"></i>
+                                </div>
+                                <div class="status-info">
+                                    <div class="status-number" id="urgentAnimals">5</div>
+                                    <div class="status-label">Sürgős eset</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <h3>Csapatunk</h3>
+                    <div class="team-members">
+                        <div class="team-member">
+                            <img src="img/jazmin.jpg" alt="Jázmin">
+                            <h4>Jázmin</h4>
+                            <p>Alapító</p>
+                        </div>
+                        <div class="team-member">
+                            <img src="img/dominika.jpeg" alt="Dominika">
+                            <h4>Dominika</h4>
+                            <p>Alapító</p>
+                        </div>
+                        <div class="team-member">
+                            <img src="img/leila.jpg" alt="Leila">
+                            <h4>Leila</h4>
+                            <p>Alapító</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="about-images">
+                    <img src="img/fav.png" alt="Menhely">
+                    <img src="https://images.unsplash.com/photo-1514984879728-be0aff75a6e8?ixlib=rb-4.0.3&auto=format&fit=crop&w=1176&q=80" alt="Állatok">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Történet oldal -->
+    <section id="story" class="page story-page">
+        <div class="container">
+            <div class="section-title">
+                <h2>Miért választottuk ezt a vizsgaprojektet?</h2>
+                <p>A Boldog Mancs Állatmenhely története és a projektünk mögötti szándék</p>
+            </div>
+            
+            <div class="story-content">
+                <div class="story-intro">
+                    <div class="story-text">
+                        <h3>A kezdetek</h3>
+                        <p>A Boldog Mancs Állatmenhely története 2010-ben kezdődött, amikor három barátnő – Jázmin, Dominika és Leila – úgy döntött, hogy tesz valamit az elhagyott és sérült állatokért. Mindhárman mindig is nagy állatbarátok voltak, és látva, hogy hány állat szenved az utcán vagy a rosszul működő menhelyeken, úgy döntöttek, hogy változtatnak ezen.</p>
+                        <p>Az első időszak nehéz volt – egy kis kertvárosi házban kezdték, ahol csak 5-6 állatnak tudtak helyet adni. Azonban a szívükben hordozott szenvedély és elkötelezettség hamarosan gyümölcsöket hozott.</p>
+                    </div>
+                    <div class="story-image">
+                        <img src="https://images.unsplash.com/photo-1560743173-567a3b5658b1?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Menhely kezdetek">
+                    </div>
+                </div>
+
+                <div class="story-mission">
+                    <h3>Küldetésünk</h3>
+                    <div class="mission-cards">
+                        <div class="mission-card">
+                            <div class="mission-icon">
+                                <i class="fas fa-heart"></i>
+                            </div>
+                            <h4>Mentés és Gyógyítás</h4>
+                            <p>Elhagyott és sérült állatok megmentése, gyógyítása és rehabilitációja.</p>
+                        </div>
+                        <div class="mission-card">
+                            <div class="mission-icon">
+                                <i class="fas fa-home"></i>
+                            </div>
+                            <h4>Örökbefogadás</h4>
+                            <p>Minden állatnak szerető, felelős és végleges otthon biztosítása.</p>
+                        </div>
+                        <div class="mission-card">
+                            <div class="mission-icon">
+                                <i class="fas fa-graduation-cap"></i>
+                            </div>
+                            <h4>Oktatás</h4>
+                            <p>Közösségünk felvilágosítása a felelős állattartás fontosságáról.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-story">
+                    <h3>A projekt ötlete</h3>
+                    <div class="project-text">
+                        <p>A weboldal projekt ötlete azért született meg, mert felismertük, hogy a digitális korban az online jelenlét kulcsfontosságú az állatok örökbefogadásának elősegítésében. Korábban csak egy egyszerű Facebook-oldalunk volt, de szerettünk volna egy professzionális, felhasználóbarát weboldalt, ahol:</p>
+                        
+                        <ul class="project-list">
+                            <li><i class="fas fa-paw"></i> Az állatok részletesen bemutathatók</li>
+                            <li><i class="fas fa-paw"></i> Az örökbefogadási folyamat átláthatóvá válik</li>
+                            <li><i class="fas fa-paw"></i> A támogatók könnyedén kapcsolatba léphetnek velünk</li>
+                            <li><i class="fas fa-paw"></i> A sikertörténetek inspirálhatják másokat</li>
+                            <li><i class="fas fa-paw"></i> Az önkéntesek online jelentkezhetnek</li>
+                        </ul>
+                        
+                        <p>Mint három szenvedélyes állatbarát és webfejlesztés iránt érdeklődő hallgató, úgy éreztük, hogy ez a projekt tökéletesen összeköti a szakmai érdeklődésünket és a személyes szenvedélyünket az állatokért.</p>
+                    </div>
+                </div>
+
+                <div class="values-section">
+                    <h3>Értékeink</h3>
+                    <div class="values-grid">
+                        <div class="value-card">
+                            <div class="value-icon">
+                                <i class="fas fa-hand-holding-heart"></i>
+                            </div>
+                            <h4>Emlészetszeretet</h4>
+                            <p>Minden állatot egyedinek tekintünk, és azt hisszük, hogy minden élet értékes.</p>
+                        </div>
+                        <div class="value-card">
+                            <div class="value-icon">
+                                <i class="fas fa-shield-alt"></i>
+                            </div>
+                            <h4>Felelősség</h4>
+                            <p>Felelős állattartást és örökbefogadást támogatunk, hogy ne ismétlődjön meg az elhagyás.</p>
+                        </div>
+                        <div class="value-card">
+                            <div class="value-icon">
+                                <i class="fas fa-users"></i>
+                            </div>
+                            <h4>Közösség</h4>
+                            <p>Hiszünk abban, hogy együtt tudunk többet elérni az állatokért.</p>
+                        </div>
+                        <div class="value-card">
+                            <div class="value-icon">
+                                <i class="fas fa-seedling"></i>
+                            </div>
+                            <h4>Fenntarthatóság</h4>
+                            <p>Környezettudatos módon működünk és fenntartható megoldásokat keresünk.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="future-plans">
+                    <h3>Jövőbeli terveink</h3>
+                    <div class="plans-content">
+                        <div class="plan">
+                            <h4><i class="fas fa-clinic-medical"></i> Állatorvosi központ</h4>
+                            <p>Állatorvosi rendelő és műtőhelyiség kialakítása a helyszínen.</p>
+                        </div>
+                        <div class="plan">
+                            <h4><i class="fas fa-school"></i> Oktatási központ</h4>
+                            <p>Iskolai programok és workshopok szervezése a felelős állattartásról.</p>
+                        </div>
+                        <div class="plan">
+                            <h4><i class="fas fa-mobile-alt"></i> Mobilalkalmazás</h4>
+                            <p>Örökbefogadási app fejlesztése, hogy még több állat találjon otthont.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="conclusion">
+                    <div class="conclusion-text">
+                        <h3>Összegzés</h3>
+                        <p>A Boldog Mancs Állatmenhely nem csupán egy menhely – egy álom valóra váltása. Egy álom arról, hogy minden állatnak joga van egy szerető otthonhoz. Ez a weboldal pedig ennek az álomnak a digitális megtestesülése.</p>
+                        <p>Reméljük, hogy projektünk nemcsak egy sikeres vizsgamunkát eredményez, hanem valódi változást hoz az állatok életében. Minden látogatás, minden megosztás és minden örökbefogadás hozzájárul ahhoz, hogy egy állat élete örökre megváltozzon a jobbik irányba.</p>
+                        
+                        <div class="quote">
+                            <i class="fas fa-quote-left"></i>
+                            <p>"A legnagyobb dicséret nem az, amit kapunk, hanem a csend, amely egykor hangos ugatással teli ketrecből származik, mert annak a lakója végre megtalálta az örökre szóló otthonát."</p>
+                            <cite>- A Boldog Mancs csapata</cite>
+                        </div>
+                    </div>
+                    <div class="conclusion-image">
+                        <img src="https://images.unsplash.com/photo-1543466835-00a7907e9de1?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Boldog állatok">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Elérhetőség oldal -->
+    <section id="contact" class="page contact">
+        <div class="container">
+            <div class="section-title">
+                <h2>Lépj kapcsolatba velünk!</h2>
+                <p>Keress minket bátran bármilyen kérdéssel, ötlettel vagy megkereséssel!</p>
+            </div>
+            <div class="contact-info">
+                <div class="contact-item">
+                    <h3>Címünk</h3>
+                    <p>Boldog Mancs Állatmenhely<br>1234 Vidámváros, Barátság utca 7.</p>
+                </div>
+                <div class="contact-item">
+                    <h3>Telefon</h3>
+                    <p>+36 1 234 5678</p>
+                </div>
+                <div class="contact-item">
+                    <h3>Email</h3>
+                    <p>info@boldogmancs.hu</p>
+                </div>
+                <div class="contact-item">
+                    <h3>Nyitvatartás</h3>
+                    <p>Hétfő - Péntek: 9:00 - 18:00<br>Szombat: 10:00 - 16:00<br>Vasárnap: Zárva</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Lábléc -->
+    <footer>
+        <div class="container">
+            <div class="footer-logo">
+                <div class="logo">
+                    <div class="logo-icon">
+                        <i class="fas fa-paw"></i>
+                    </div>
+                    <div class="logo-text">
+                        <h1>Boldog Mancs Állatmenhely</h1>
+                        <p>Minden állat egy otthonra vágyik!</p>
+                    </div>
+                </div>
+                <div class="social-links">
+                    <a href="#"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-youtube"></i></a>
+                    <a href="#"><i class="fab fa-tiktok"></i></a>
+                </div>
+            </div>
+            <div class="footer-links">
+                <div class="footer-column">
+                    <h4>Oldalak</h4>
+                    <ul>
+                        <li><a href="#" class="nav-link" data-page="home">Főoldal</a></li>
+                        <li><a href="#" class="nav-link" data-page="adoption">Örökbefogadás</a></li>
+                        <li><a href="#" class="nav-link" data-page="about">Bemutatkozás</a></li>
+                        <li><a href="#" class="nav-link" data-page="story">Történet</a></li>
+                        <li><a href="#" class="nav-link" data-page="contact">Elérhetőség</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h4>Információk</h4>
+                    <ul>
+                        <li><a href="#">ÁSZF</a></li>
+                        <li><a href="#">Adatvédelmi nyilatkozat</a></li>
+                        <li><a href="#">Impresszum</a></li>
+                        <li><a href="#">GYIK</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h4>Örökbefogadás</h4>
+                    <ul>
+                        <li><a href="#">Örökbefogadási folyamat</a></li>
+                        <li><a href="#">Kötelezettségek</a></li>
+                        <li><a href="#">Gyakori kérdések</a></li>
+                        <li><a href="#">Sikertörténetek</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="copyright">
+                <p>&copy; 2025-2026 Boldog Mancs Állatmenhely - Minden jog fenntartva.</p>
+                <p style="font-size: 0.9rem; margin-top: 10px; color: #888;">Weboldal készült vizsgaprojektként!</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Örökbefogadási modal -->
+    <div id="adoptionModal" class="modal adoption-modal">
+        <div class="modal-content adoption-modal-content">
+            <div class="modal-header">
+                <h2>Örökbefogadási jelentkezés</h2>
+                <span id="closeAdoption" class="close">&times;</span>
+            </div>
+            <div class="modal-body">
+                <div class="modal-animal-info">
+                    <p><strong>Örökbefogadás kezdeményezve:</strong></p>
+                    <div id="modalAnimalInfo" class="animal-info-summary">
+                        <!-- Az állat infók ide kerülnek JavaScriptből -->
+                    </div>
+                </div>
+                
+                <form id="adoptionForm">
+                    <input type="hidden" id="animalNameInput" name="animalName">
+                    
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="fullName">Teljes név *</label>
+                            <input type="text" id="fullName" name="fullName" required placeholder="Kérjük, add meg a neved">
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="email">Email cím *</label>
+                            <input type="email" id="email" name="email" required placeholder="pelda@email.hu">
+                        </div>
+                    </div>
+                    
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="phone">Telefonszám *</label>
+                            <input type="tel" id="phone" name="phone" required placeholder="+36 20 123 4567">
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="homeType">Lakás típusa</label>
+                            <select id="homeType" name="homeType">
+                                <option value="">Válassz...</option>
+                                <option value="lakas">Lakás</option>
+                                <option value="haz_kerttel">Ház kerttel</option>
+                                <option value="haz_kert_nelkul">Ház kert nélkül</option>
+                                <option value="egyeb">Egyéb</option>
+                            </select>
+                        </div>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="address">Lakcím</label>
+                        <input type="text" id="address" name="address" placeholder="Város, utca, házszám">
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="experience">Korábbi állattartási tapasztalat</label>
+                        <textarea id="experience" name="experience" rows="3" placeholder="Írd le, ha van korábbi tapasztalatod állattartásban..."></textarea>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="message">Üzenet (opcionális)</label>
+                        <textarea id="message" name="message" rows="3" placeholder="Egyéb megjegyzések, kérdések..."></textarea>
+                    </div>
+                    
+                    <div class="form-group checkbox-group">
+                        <label class="checkbox-label">
+                            <input type="checkbox" id="terms" name="terms" required>
+                            <span>Elolvastam és elfogadom az <a href="#" class="terms-link">Általános Szerződési Feltételeket</a> és az <a href="#" class="terms-link">Adatvédelmi Nyilatkozatot</a> *</span>
+                        </label>
+                    </div>
+                    
+                    <div class="form-group checkbox-group">
+                        <label class="checkbox-label">
+                            <input type="checkbox" id="newsletter" name="newsletter">
+                            <span>Szeretnék hírlevelet kapni a menhelyünk híreiről és eseményeiről</span>
+                        </label>
+                    </div>
+                    
+                    <div class="form-actions">
+                        <button type="submit" class="submit-btn">
+                            <i class="fas fa-paper-plane"></i> Jelentkezés elküldése
+                        </button>
+                        <button type="button" id="cancelAdoption" class="cancel-btn">Mégse</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <!-- Állat részletek modal -->
+    <div id="animalModal" class="modal animal-modal">
+        <div class="modal-content animal-modal-content">
+            <span id="closeAnimal" class="close">&times;</span>
+            <div id="animalDetails"></div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
